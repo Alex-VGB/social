@@ -8,7 +8,6 @@ import {
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
 import {compose} from "redux";
-import {WithAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -17,19 +16,18 @@ class UsersContainer extends React.Component {
 
     onPageChanged = (pageNumber) => {
         this.props.getUsers(pageNumber, this.props.pageSize);
-
     }
 
     render() {
         return <>
-            {this.props.isFetching ? <Preloader/> : null}
+            { this.props.isFetching ? <Preloader /> : null }
             <Users totalUsersCount={this.props.totalUsersCount}
                    pageSize={this.props.pageSize}
                    currentPage={this.props.currentPage}
                    onPageChanged={this.onPageChanged}
                    users={this.props.users}
-                   unfollow={this.props.unfollow}
                    follow={this.props.follow}
+                   unfollow={this.props.unfollow}
                    followingInProgress={this.props.followingInProgress}/>
         </>
     }
@@ -45,11 +43,6 @@ let mapStateToProps = (state) => {
         followingInProgress: state.usersPage.followingInProgress
     }
 }
-
-
 export default compose(
-    WithAuthRedirect,
-    connect(mapStateToProps, {
-        follow, unfollow, setCurrentPage, setToggleFollowingProgress, getUsers
-    })
+    connect(mapStateToProps,{follow, unfollow, setCurrentPage, setToggleFollowingProgress, getUsers })
 )(UsersContainer)
