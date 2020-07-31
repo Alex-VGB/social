@@ -1,10 +1,11 @@
 .header {
     grid-area: h;
-    background-color: green;
+    background-color: rgb(74,118,168);
 }
 
 .header img {
-    width: 20px;
+    width: 40px;
+    padding: 20px;
 }
 .loginBlock{
     float: right;
@@ -15,4 +16,15 @@
     color: white;
     text-decoration: none;
 }
-
+.colorLogin {
+    color: white;
+}
+.loginBtn{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -80px;
+}
+.mainPhotoSmall{
+    width: 50px;
+    height: 50px;
+}
