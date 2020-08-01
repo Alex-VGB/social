@@ -1,14 +1,17 @@
 .nav {
     grid-area: n;
-    background-color: burlywood;
     padding: 20px;
 }
-
-.item a {
-    color: white;
-    text-decoration: none;
+.item {
+    padding:5px;
 }
-
-.item a.active {
-    color: gold;
+.item:hover {
+    background-color: rgb(211,217,222);
+}
+.item a {
+    color: #2a5885;
+    text-decoration: none;
+    padding-right: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }

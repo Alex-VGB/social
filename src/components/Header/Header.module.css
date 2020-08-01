@@ -21,8 +21,13 @@
 }
 .loginBtn{
     position: absolute;
-    margin-top: 30px;
-    margin-left: -80px;
+    margin-top: 25px;
+    margin-left: -65px;
+    background: transparent;
+    border: solid 1px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 .mainPhotoSmall{
     width: 50px;

@@ -3,6 +3,7 @@ import s from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/images/user.png";
+import ProfileDescription from "./ProfileDescription";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -16,12 +17,15 @@ const ProfileInfo = (props) => {
     }
 
     return (
-        <div>
-            <div className={s.descriptionBlock}>
+        <div className={s.mainProfileBlock}>
+            <div className={s.imgBlock}>
                 <img src={props.profile.photos.large || userPhoto} className={s.mainPhoto} alt=""/>
-                { props.isOwner && <input type={"file"} onChange={onMainPhotoSelected}/> }
-                <ProfileStatusWithHooks status={props.status}
-                                        updateStatus={props.updateStatus}/>
+                {props.isOwner && <input className={s.fileBtn} type={"file"} onChange={onMainPhotoSelected}/>}
+            </div>
+            <div className={s.descriptionBlock}>
+                <ProfileDescription status={props.status}
+                                    updateStatus={props.updateStatus}
+                                    profile={props.profile}/>
             </div>
         </div>
     )

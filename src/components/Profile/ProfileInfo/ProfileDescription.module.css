@@ -1,20 +1,10 @@
-.mainProfileBlock{
-    display: flex;
-}
-.imgBlock{
-    padding: 10px;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #e7e8ec;
-    margin: 15px 0 0;
-}
 .descriptionBlock{
     padding: 10px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #e7e8ec;
-    margin: 15px 15px 0;
-    width:100%;
+    margin: 15px 0 0;
+    display: flex;
 }
 .mainPhoto{
     width:250px;
@@ -23,7 +13,7 @@
 .fileBtn{
     position: absolute;
     display: inline-block;
-    width: 250px;
+    width: 200px;
     padding: 40px 1px 0 0;
     height: 40px;
     overflow: hidden;
@@ -31,9 +21,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png) center center no-repeat #e4e4e4;
-    background-size: 35px 35px;
-    margin-left: -250px;
-    bottom: 95px;
-    opacity: .7;
-    cursor: pointer;
+    border-radius: 20px;
+    background-size: 20px 20px;
+    margin-left: -200px;
 }
